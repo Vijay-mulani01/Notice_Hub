@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'User/style.css' %}">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Notice Hub</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="content">
+        <div class="header">
+            <h1 class="title">Notice Hub</h1>
+        </div>
+        
+        {% for notice in result %}
+
+        <div class="notice-content">
+            <h2>{{notice.Subject}}</h2>
+            <p>{{notice.Description}}</p>
+             Date Posted : {{notice.Date_Posted}}<br>
+             Updated On : {{notice.Date_Updated}}
+        </div>
+        {% endfor %}
+        </div>
+        <footer class="footer">
+
+            <div class="footer__social">
+                <a href="https://www.facebook.com/VIJAY.MULANI.01" class="footer__icon"><i
+                        class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/invites/contact/?i=hxxky5mkg1ui&utm_content=ac7jolq"
+                    class="footer__icon"><i class='bx bxl-instagram'></i></a>
+                <a href="https://github.com/Vijay-mulani01" class="footer__icon"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/vijay-mulani" class="footer__icon"><i
+                        class='bx bxl-linkedin'></i></a>
+            </div>
+            <p class="footer__copy">&#169; Vijay. All rigths reserved</p>
+        </footer>
+    </div>
+</body>
+
+</html>
